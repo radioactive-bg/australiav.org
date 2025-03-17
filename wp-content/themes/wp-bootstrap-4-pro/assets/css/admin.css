@@ -1,0 +1,29 @@
+.acf-flexible-content .layout .acf-fc-layout-handle {
+	background: #f0f0f1;
+}
+.acf-flexible-content .layout .acf-fc-layout-order {
+	background: #2271b1!important;
+	color: #fff!important;
+}
+.acf-table {
+	border-collapse: collapse;
+}
+.acf-repeater .acf-row:not(:nth-last-of-type(2)) {
+	border-bottom: 2px solid #2271b1;
+}
+.acf-flm-btn-copy-all-layouts,.acf-flm-btn-past-layout {
+	display: none!important;
+}
+.notice-otgs {
+	display: none;
+}
+.customize-control-kirki-dimension .has-label-bottom .kirki-control-input {
+	background-color: #fff!important;
+}
+.iris-picker {position: absolute;}
+.acf-switch .acf-switch-slider{
+	z-index: 0;
+}
+.layout:has([data-name="disable_layout"] input[checked="checked"]) {
+  opacity: 0.5;
+}

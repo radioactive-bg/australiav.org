@@ -1,0 +1,8 @@
+@media (min-width: 768px) {
+  .hentry.card .card-body {
+    padding: 2.5rem 4rem;
+  }
+  .wb-hide-mobile-sidebar .sidebar-width {
+    display: block;
+  }
+}

@@ -1,0 +1,320 @@
+/*
+Theme Name: WP Bootstrap 4 Pro
+Theme URI: https://bootstrap-wp.com
+Author: TwoPoints
+Author URI:
+Description: "WP Bootstrap 4" is a simple & easy to use WordPress theme. It is based on world's most popular framework for responsive websites, Twitter Bootstrap 4. "WP Bootstrap 4" is a perfect combination of Bootstrap 4 and WordPress. It is fast and light-weight with around 20 kb style.css. It is also search engine friendly. It has a built-in slider for featured posts on blog's home page. It supports all major & popular WordPress plugins like Jetpack, Contact Form 7, Elementor, Beaver Builder, SiteOrigin Page Builder etc. Check demo on https://bootstrap-wp.com
+Version: 1.1
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl.html
+Text Domain: wp-bootstrap-4
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, two-columns, left-sidebar, right-sidebar, custom-colors, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, blog
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+WP Bootstrap 4 is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+.bg-light {
+  background-color: var(--light) !important;
+}
+h2,
+.heading,
+p {
+  margin-bottom: var(--spacer-4);
+}
+
+label {
+  opacity: 0.6;
+}
+.accordion .btn {
+  font-size: 1.4rem;
+  padding: 0;
+}
+.main-navigation .container {
+  position: relative;
+  border-radius: 50px;
+  border: 1px solid rgba(43, 43, 43, 0.9);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  padding: var(--spacer-2) var(--spacer-3);
+}
+.section-desc {
+  max-width: 100%;
+}
+
+
+#hero .container {
+  position: relative;
+  z-index: 2;
+}
+.jumbotron-description {
+  max-width: 760px;
+}
+.cta-global-section {
+  min-height: 62vh;
+  display: flex;
+  align-items: center;
+}
+
+.cta-global-section .container {
+  position: relative;
+  z-index: 2;
+}
+.cta-global-section .container .card-body {
+  max-width: 1200px;
+  margin: auto;
+}
+label.label {
+  font-family: inherit;
+  opacity: 1;
+  text-transform: unset;
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+.section-content-img .img-wrapper img {
+  border-radius: 16px;
+}
+.card {
+  background-repeat: no-repeat;
+}
+
+#breadcrumbs a {
+  color: #fff;
+}
+/*--------------------------------------------------------------
+# Custom Header
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Non Transparent Header in Mobile
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
+  .trans-header .navbar-collapse {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  header .navbar-nav {
+    max-height: calc(100vh - 130px);
+    min-height: calc(100vh - 130px);
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+  }
+  #primary-menu-wrapper {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  #site-navigation :has(.show) .site-branding-content {
+    padding-top: 20px;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .navbar-nav .dropdown-menu {
+    background: transparent;
+  }
+}
+/*--------------------------------------------------------------
+# Bootstrap Modal
+--------------------------------------------------------------*/
+.modal-content {
+  background-color: var(--dark) !important;
+}
+.modal-header {
+  border-bottom: 1px solid #373737;
+}
+.modal-title {
+  opacity: 1 !important;
+}
+/*--------------------------------------------------------------
+# Bootstrap Buttons
+--------------------------------------------------------------*/
+.btn:not(.btn-link):not(.nav-link):not([data-toggle="collapse"]):after {
+  display: none;
+}
+.btn:not(.btn-link) {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn:not(.btn-link):after {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  filter: invert(1);
+  opacity: 0.7;
+}
+.btn.btn-link:not([data-toggle="collapse"]) {
+  padding: 0;
+  border: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: var(--accent);
+  font-size: 1rem;
+}
+.btn.btn-link.text-secondary:not([data-toggle="collapse"]):hover {
+  color: var(--secondary) !important;
+}
+.btn.btn-link.text-primary:not([data-toggle="collapse"]),
+.btn.btn-link.text-primary:not([data-toggle="collapse"]):hover {
+  color: var(--primary) !important;
+  border-bottom: 1px solid var(--primary);
+}
+.btn:after,
+.btn.btn-link:after {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+html[dir="rtl"] .btn:not([data-toggle="collapse"]):after,
+html[dir="rtl"] .btn.btn-lin:not([data-toggle="collapse"]):after {
+  transform: rotate(180deg);
+}
+.btn:not([data-toggle="collapse"]):hover:after,
+.btn.btn-link:not([data-toggle="collapse"]):hover:after {
+  transform: translateX(5px);
+}
+html[dir="rtl"] .btn:not([data-toggle="collapse"]):hover:after,
+html[dir="rtl"] .btn.btn-link:not([data-toggle="collapse"]):hover:after {
+  transform: translateX(-5px) rotate(180deg);
+}
+.btn-search img,
+.navbar-toggler {
+  filter: invert(1);
+}
+button.btn-search {
+  box-shadow: none !important;
+  padding: 0.6rem;
+  background-color: transparent;
+  width: 43px;
+  min-width: 43px;
+  height: 43px;
+}
+
+button.btn-search:after,
+.dropdown-search button:after {
+  display: none !important;
+}
+.content-affix .dropdown-search {
+  position: fixed;
+  width: 100%;
+  top: 62px;
+  z-index: 10;
+}
+@media (min-width: 992px) {
+  .site-header .btn.btn-outline-light {
+    padding: 0.5rem;
+    border-width: 2px;
+  }
+  .site-header .btn.btn-outline-light span {
+    display: none !important;
+  }
+  .site-header .btn.btn-outline-light img {
+    margin: 0 !important;
+    min-width: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .content-affix .dropdown-search {
+    top: 92px;
+  }
+}
+@media (max-width: 1199px) {
+  html:not([dir="rtl"]) button.btn-search {
+    margin-left: -10px;
+  }
+  html[dir="rtl"] button.btn-search {
+    margin-right: -10px;
+  }
+}
+@media (max-width: 991px) {
+  .site-header .btn.btn-secondary {
+    font-size: 12px;
+    padding: 0.4rem 1rem;
+  }
+}
+:is(.desktop-visible, .mobile-visible) :is(.btn img) {
+  filter: invert(1);
+}
+/* .double__img {
+  background: url("/wp-content/uploads/2023/03/cta-section-back.jpg") no-repeat 50% 50% / cover;
+} */
+.footer-logos-wrapper {
+  display: flex;
+  margin: 0 -5px;
+}
+
+.footer-logos {
+  margin: 5px;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+}
+/*--------------------------------------------------------------
+# Custom Sections
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start Custom Website Styles !!!!
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# End Custom Website Styles !!!!
+--------------------------------------------------------------*/
+body:not(.custom-page-color)
+  .wpml-ls-statics-footer.wpml-ls-legacy-list-horizontal {
+  background: #1c1b1f;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+.custom-page-color footer.site-footer {
+  background: transparent;
+}
+footer.site-footer .legal-nav {
+  padding: 0;
+}
+footer.site-footer .legal-nav .nav-item {
+  width: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+#footer-bottom {
+  text-align: center;
+}
+#footer-bottom .social a {
+  margin: 5px;
+}
+
+header .wpml-ls-legacy-dropdown,
+header .wpml-ls-legacy-list-horizontal {
+  margin-left: 10px;
+}
+html[dir="rtl"] header .wpml-ls-legacy-dropdown,
+html[dir="rtl"] header .wpml-ls-legacy-list-horizontal {
+  margin-left: unset;
+  margin-right: 10px;
+}
+header .wpml-ls-legacy-dropdown a,
+header .wpml-ls-legacy-list-horizontal a {
+  color: var(--dark);
+}
+.inverted-nav .share-on,
+.inverted-nav .wpml-ls-legacy-dropdown a,
+.inverted-nav .wpml-ls-legacy-dropdown a:hover,
+.inverted-nav .wpml-ls-legacy-list-horizontal a,
+header:not(.inverted-nav) .wpml-ls-legacy-dropdown .wpml-ls-sub-menu a {
+  color: #fff !important;
+}
+header:not(.inverted-nav)
+  .wpml-ls-legacy-list-horizontal.wpml-ls-statics-footer {
+  background: #1c1b1f;
+  margin-bottom: 0px;
+}

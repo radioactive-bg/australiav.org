@@ -1,0 +1,234 @@
+:root {
+  --scrollbar-width: 5px;
+   --scrollbar-height: 30px;
+}
+.table-responsive::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 3px;
+  border: none;
+  height: var(--scrollbar-height);
+}
+.table-responsive::-webkit-scrollbar-track {
+  background: var(--bs-light);
+  border-radius: 3px;
+}
+
+.fw-100 {
+  font-weight: 100 !important;
+}
+.fw-200 {
+  font-weight: 200 !important;
+}
+.fw-300 {
+  font-weight: 300 !important;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+.fw-600 {
+  font-weight: 600 !important;
+}
+.fw-700 {
+  font-weight: 700 !important;
+}
+.fw-800 {
+  font-weight: 800 !important;
+}
+.fw-900 {
+  font-weight: 900 !important;
+}
+.fw-1000 {
+  font-weight: 1000 !important;
+}
+
+.table-container {
+  height: calc(100vh - 5rem);
+}
+.table-container .card-body:after {
+  content: "";
+  width: calc(100% - 2rem);
+  height: 0px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+}
+.table-container  .card-header{
+  min-height: unset;
+}
+/* Table  */
+.table-responsive {
+  overflow-y: scroll;
+  height: 100%;
+}
+.table-container table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 0;
+}
+table#data {
+  min-width: 680px;
+}
+th,
+td {
+  padding: 0.4rem 0.8rem;
+  /* border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray); */
+  line-height: 1.2;
+  font-size: 14px;
+}
+th {
+  background-color: rgb(239 251 255 / 30%);
+  padding: 0.4rem 0.8rem;
+}
+/* form styles */
+.table-filters input,
+.table-filters select {
+  font: inherit;
+  margin: 0;
+  padding: 0.2rem 0.6rem;
+  margin-left: 0.6rem;
+  width: 180px;
+  max-width: 100%;
+  border: 1px solid var(--gray);
+  background-color: var(--dark);
+  color: #fff;
+  border-radius: 5px;
+}
+.input-text {
+  min-width: 150px;
+  background-color: rgb(239 251 255 / 10%);
+  border: 1px solid var(--gray);
+}
+
+.table-filters label {
+  margin: 5px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+/* Filtable styles */
+table th,
+table td {
+  padding: 0.75rem;
+  border-top: 1px solid rgb(222 226 230 / 30%);
+}
+tr.hidden {
+  display: none;
+}
+tbody tr:first-of-type td {
+  border: none;
+}
+tbody tr td:first-of-type {
+  width: 80px;
+  min-width: 80px;
+  height: 70px;
+}
+tbody tr td:nth-of-type(2) {
+  width: 32%;
+}
+.sticky-table tbody tr td:first-of-type {
+  height: 0;
+}
+.sticky-table tbody tr td {
+  padding: 0 !important;
+  border: none;
+}
+tr td img {
+  border-radius: 5px;
+}
+tr:nth-child(odd) > td {
+  background-color: transparent;
+}
+tr:nth-child(even) > td {
+  background-color: rgb(239 251 255 / 10%);
+}
+tr.odd > td {
+  background-color: transparent;
+}
+tr.even > td {
+  background-color: rgb(239 251 255 / 10%);
+}
+thead tr:nth-child(odd) > td {
+  color: var(--bs-dark-blue);
+  background-color: transparent;
+  font-weight: 700;
+}
+tr td:nth-of-type(3),
+tr td:nth-of-type(4) {
+  text-align: center;
+}
+tr td:nth-of-type(5) {
+  text-align: right;
+}
+tr td:last-of-type:not(:only-child) {
+  /* display: none; */
+}
+tfoot td {
+  border-top: none;
+}
+.info-cta {
+  padding: 1rem;
+  margin: -1rem;
+}
+@media (min-width: 768px) {
+  tr td:nth-of-type(3),
+  tr td:nth-of-type(4) {
+    width: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .card-header:first-child {
+    border-radius: calc(0.3rem - 1px);
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 991px) {
+  .table-container {
+    height: calc(90vh - 4rem);
+  }
+  .table-container .card-body:after {
+    height: 0px;
+  }
+  #FilterReset {
+    /* display: none; */
+  }
+  tbody tr td:first-of-type {
+    width: 40px;
+    min-width: 40px;
+    height: 50px;
+    padding: 8px 0;
+  }
+  tr td:nth-of-type(4){
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+table#data {
+    min-width: 350px;
+}
+.table-container .card-body,
+.table-container .card-header {
+    min-height: unset;
+    padding: 10px;
+}
+}
