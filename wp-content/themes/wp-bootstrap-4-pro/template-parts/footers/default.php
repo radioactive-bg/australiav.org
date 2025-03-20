@@ -10,9 +10,9 @@ $footer_style = get_field('footer_style', 'option');
 <footer id="colophon" class="footer_<?php echo $footer_style ;?> site-footer section-gutter">
 	<section class="footer-widgets">
 		<div class="container">
-			<div class="row align-items-center">
+			<div class="row align-items-start">
 				<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
-					<div class="col-12 col-md-6 col-lg mb-4">
+					<div class="col-12 col-md-6 col-lg-auto mb-4">
 						<aside class="widget-area footer-1-area">
 							<?php dynamic_sidebar( 'footer-1' ); ?>
 						</aside>

@@ -284,8 +284,8 @@
 	.navbar-toggler-icon {
 		background-image: url('<?php echo get_template_directory_uri();?>/assets/images/burger.svg');
 	}
-	.item-description li:before,
-	.content li:before{
+	.item-description ul li:before,
+	.content ul li:before{
 	<?php if ((in_category('business') && !in_category('personal')) || is_page(array( 'business' ))):?>
 		background-image: url('<?php echo get_template_directory_uri();?>/assets/images/list-small-icon-primary.svg');
 	<?php else: ?>
@@ -317,7 +317,7 @@
 		background: url('<?php echo get_template_directory_uri();?>/assets/images/lp-icon-arrow.svg') center/80% no-repeat
 	}	
 	footer.site-footer .menu li:before{
-	   background-image: url('<?php echo get_template_directory_uri();?>/assets/images/leaf.svg');
+	   background-image: url('<?php echo get_template_directory_uri();?>/assets/images/v.svg');
 	}
 	<?php $parallax_hover =  get_field('parallax_hover','options'); 
 	if($parallax_hover == true) { ?>
@@ -341,7 +341,7 @@
 		width: 100%;
 		height: 100%;
 		transition: all 0.2s ease-out;
-		padding-top: 100%;
+		/* padding-top: 100%; */
 	}
 	.atvImg-container.over .atvImg-shadow {
 		box-shadow: 0 45px 100px rgba(0, 0, 0, 0.4), 0 16px 40px rgba(0, 0, 0, 0.4);

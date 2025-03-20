@@ -13,9 +13,9 @@ if( have_rows( 'page_header_settings' ) ) :
 endif;
 
 ?>
-<header id="masthead" class="header_<?php echo $header_style ;?> site-header <?php echo ($invert_heading) ? 'inverted-nav' : ''; ?>  <?php if ( get_theme_mod( 'sticky_header', 0 ) ) : echo 'sticky-top'; endif; ?>">
+<header id="masthead" class="header_<?php echo $header_style ;?> site-header <?php echo ($invert_heading) ? 'inverted-nav' : ''; ?>  <?php if ( get_theme_mod( 'sticky_header', 0 ) ) : echo 'sticky-top'; endif; ?> bg-dark">
 
-<?php if( get_theme_mod( 'header_within_container', 0 ) ) : ?><div class="container pt-5 <?php echo is_front_page()? 'pb-3' : ''; ?>"><?php else: ?><div class="container-fluid pt-5 <?php echo is_front_page()? 'pb-3' : ''; ?>"><?php endif; ?>
+<?php if( get_theme_mod( 'header_within_container', 0 ) ) : ?><div class="container py-2 py-lg-3 <?php echo is_front_page()? '' : ''; ?>"><?php else: ?><div class="container-fluid py-2 py-lg-3 <?php echo is_front_page()? '' : ''; ?>"><?php endif; ?>
 	<div class="row">
 		<div class="col-12 col-lg d-flex flex-wrap flex-column align-items-center">
 			<button class="navbar-dark navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#primary-menu-wrapper" aria-controls="primary-menu-wrapper" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,7 @@ endif;
 		
 			<div class="site-branding-text col col-md-auto col-lg text-center <?php if ( is_rtl()) : ?>text-md-right<?php else: ?>text-md-left<?php endif; ?> px-0 ml-0 ml-md-3">
 				<?php
-					if ( is_front_page() && is_home() ) : ?>
+					if ( is_front_page() || is_home() ) : ?>
 						<h1 class="site-title h3 mb-0 mx-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="navbar-brand m-0"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php else : ?>
 						<h2 class="site-title h3 mb-0 mx-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="navbar-brand m-0"><?php bloginfo( 'name' ); ?></a></h2>

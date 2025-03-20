@@ -44,19 +44,23 @@ include 'vars.php';
 	
 	<div class="carousel-item slide-item-<?php echo $i;?> <?php if($i == 0) echo 'active';?>" role="option">
 		<div class="row align-items-center justify-content-center;" style="flex-grow: 1;">
-			<div class=" col-md-8 mx-auto text-center">
-				<?php if ($slide_image):?>
-					<img width="100px" height="100px" class="slide-img mx-auto mb-4 border" src="<?php echo esc_url($slide_image['url']) ;?>" alt="<?php echo esc_attr($slide_image['title']); ?>" style="border-radius: 100px;"/>
-				<?php endif;?>
-				<?php if( $slide_description ): ?>
-					<div class="slide-desc"><?php echo $slide_description; ?></div>
-				<?php endif; ?>
-				<?php if( $slide_title ): ?>
-					<h3 class="slide-title h4 mt-4 mb-0"><?php echo $slide_title; ?></h3>
-				<?php endif; ?>
-				<?php if( $slide_position ): ?>
-					<p class="slide-position text-uppercase" style="color: rgba(0,0,0,0.37);"><?php echo $slide_position; ?></p>
-				<?php endif; ?>
+			<div class="col-md-10 col-lg-8 mx-auto text-center">
+				<div class="card text-white" style="border-radius: 16px;">
+					<div class="card-body">
+					<?php if ($slide_image):?>
+						<img width="100px" height="100px" class="slide-img mx-auto mb-4 border" src="<?php echo esc_url($slide_image['url']) ;?>" alt="<?php echo esc_attr($slide_image['title']); ?>" style="border-radius: 100px;"/>
+					<?php endif;?>
+					<?php if( $slide_title ): ?>
+						<h3 class="slide-title h4 text-uppercase mb-2"><?php echo $slide_title; ?></h3>
+					<?php endif; ?>
+					<?php if( $slide_position ): ?>
+						<p class="slide-position small text-uppercase mb-0" style="color: rgba(0,0,0,0.37);"><?php echo $slide_position; ?></p>
+					<?php endif; ?>
+					<?php if( $slide_description ): ?>
+						<div class="slide-desc mt-2"><?php echo $slide_description; ?></div>
+					<?php endif; ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

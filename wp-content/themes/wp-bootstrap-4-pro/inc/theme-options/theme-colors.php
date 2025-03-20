@@ -364,7 +364,7 @@ WP_Bootstrap_4_Kirki::add_field( 'wp_bootstrap_4_theme', array(
     ),
 ) );
 WP_Bootstrap_4_Kirki::add_field( 'wp_bootstrap_4_theme', array(
-	'settings' => 'footer_title',
+	'settings' => 'footer_title_end',
 	'section'  => 'colors',
 	'type'     => 'custom',
     'default'  => '<hr/><h2 class="">' . esc_html__( 'Footer', 'wp-bootstrap-4' ) . '</h2>',

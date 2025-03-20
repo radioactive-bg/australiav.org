@@ -185,3 +185,33 @@ function add_background_mix() {
         </div>
     </div>
 </section>
+<?php if ( function_exists( 'yoast_breadcrumb' ) ) { ?>
+<nav id="breadcrumb-navigation" class="breadcrumb-navigation relative navbar text-white w-100 py-2">
+	<div class="container">	
+        <?php
+        if ( function_exists( 'yoast_breadcrumb' ) ) {
+            yoast_breadcrumb( );
+        }
+        ?>	
+        <div class="extra-breadcrumb-nav ml-auto card overflow-visible bg-dark border-0">
+            <div class="card-body py-2 px-3 px-lg-5">
+                <p class="mb-0 px-3"><?php echo __( 'visa types', 'wp-bootstrap-4' ) ;?></p>
+                <?php
+                    wp_nav_menu( array(
+                        'theme_location'  => 'client-area',
+                        'menu_id'         => 'secondary-menu',
+                        'container'       => 'div',
+                        'container_class' => '',
+                        'container_id'    => 'secondary-menu-wrap',
+                        'menu_class'      => 'p-0 mb-0',
+                        'fallback_cb'     => '__return_false',
+                        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'depth'           => 3,
+                        'walker'          => new WP_bootstrap_4_walker_nav_menu()
+                    ) );
+                ?>	
+            </div>
+        </div>
+	</div>
+</nav>
+<?php } ?>

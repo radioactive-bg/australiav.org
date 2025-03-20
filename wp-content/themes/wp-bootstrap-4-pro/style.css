@@ -20,11 +20,12 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   background-color: var(--light) !important;
 }
 h2,
-.heading,
-p {
+.heading{
   margin-bottom: var(--spacer-4);
 }
-
+p:not(:last-child){
+  margin-bottom: var(--spacer-3);
+}
 label {
   opacity: 0.6;
 }
@@ -32,23 +33,16 @@ label {
   font-size: 1.4rem;
   padding: 0;
 }
-.main-navigation .container {
-  position: relative;
-  border-radius: 50px;
-  border: 1px solid rgba(43, 43, 43, 0.9);
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(6px);
-  padding: var(--spacer-2) var(--spacer-3);
-}
+
 .section-desc {
   max-width: 100%;
 }
-
 
 #hero .container {
   position: relative;
   z-index: 2;
 }
+
 .jumbotron-description {
   max-width: 760px;
 }
@@ -71,8 +65,8 @@ label.label {
   opacity: 1;
   text-transform: unset;
   font-size: 1.2rem;
-  color: var(--primary);
-  font-weight: 700;
+  color: #fff;
+  font-weight: 400;
 }
 .section-content-img .img-wrapper img {
   border-radius: 16px;
@@ -88,6 +82,10 @@ label.label {
 # Custom Header
 --------------------------------------------------------------*/
 
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 /*--------------------------------------------------------------
 # Non Transparent Header in Mobile
@@ -119,6 +117,73 @@ label.label {
   }
 }
 /*--------------------------------------------------------------
+# Custom Secondary Navbar 
+--------------------------------------------------------------*/
+
+.card.extra-breadcrumb-nav {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-radius: 8px;
+  min-width: 250px;
+  z-index: 2;
+}
+#secondary-menu > li {
+  border-bottom: 2px solid #fff;
+}
+#secondary-menu > li > a {
+  font-size: 1.2rem;
+}
+#secondary-menu .dropdown-menu {
+  min-width: 100%;
+  background-color: var(--primary);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+#secondary-menu .dropdown-menu li:not(:last-of-type) {
+  border-bottom: 1px solid rgb(255 255 255 / 40%);
+}
+#secondary-menu li a {
+  color: #fff;
+  font-weight: 700;
+}
+#secondary-menu .dropdown-menu a {
+  text-align: center;
+}
+#secondary-menu .dropdown-menu a:hover {
+  color: var(--secondary);
+}
+@media (min-width: 991px) {
+  .card.extra-breadcrumb-nav {
+    min-width: 420px;
+  }
+}
+/*--------------------------------------------------------------
+# Bootstrap Carousel indicatores
+--------------------------------------------------------------*/
+.section-testimonial .card {
+  background-color: #001a6b;
+}
+.section-testimonial .slide-desc {
+  max-width: 360px;
+  margin: auto;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #001a6b;
+  width: 40px;
+  height: 40px;
+  background-size: 60% auto;
+  border-radius: 50px;
+}
+/*--------------------------------------------------------------
 # Bootstrap Modal
 --------------------------------------------------------------*/
 .modal-content {
@@ -133,6 +198,26 @@ label.label {
 /*--------------------------------------------------------------
 # Bootstrap Buttons
 --------------------------------------------------------------*/
+.section-list .btn,
+.section-content .btn{
+  min-width: 300px;
+}
+
+.btn-secondary,
+.btn-dark:hover,
+.btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle,
+.btn-dark:not(:disabled):not(.disabled):active,
+.btn-dark:not(:disabled):not(.disabled).active,
+.show > .btn-dark.dropdown-toggle {
+  color: var(--dark);
+}
+.btn-dark:focus,
+.btn-primary:focus{
+  color: #fff;
+}
 .btn:not(.btn-link):not(.nav-link):not([data-toggle="collapse"]):after {
   display: none;
 }
@@ -187,7 +272,7 @@ html[dir="rtl"] .btn.btn-link:not([data-toggle="collapse"]):hover:after {
 }
 .btn-search img,
 .navbar-toggler {
-  filter: invert(1);
+  filter: invert(0);
 }
 button.btn-search {
   box-shadow: none !important;
@@ -263,8 +348,6 @@ button.btn-search:after,
 /*--------------------------------------------------------------
 # Start Custom Website Styles !!!!
 --------------------------------------------------------------*/
-
-
 
 /*--------------------------------------------------------------
 # End Custom Website Styles !!!!

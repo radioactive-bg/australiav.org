@@ -132,7 +132,7 @@ if(!$disable_layout) {
                             <?php if ($link_content):?>
 							    <!-- Link as content -->
                                 <?php if($link): ?>
-                                    <a class="d-block h-100 flex-1 <?php echo ($invert_content) ? '' : 'text-dark'; ?>" href="<?php echo esc_url( $link_url ); ?>" title="<?php echo $link_custom_title ? esc_attr($link_custom_title) : (esc_attr($link_title) . ($title ? ' ' . esc_attr($title) : '')); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                                    <a class="d-block h-100 flex-1 <?php echo ($invert_content) ? '' : 'text-dark'; ?>" href="<?php echo esc_url( $link_url ); ?>" title="<?php echo $link_custom_title ? esc_attr($link_custom_title) : (esc_attr($link_title) . ($title ? ' ' . esc_attr(strip_tags($title)) : '')); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                                 <?php endif; ?>
 								<!-- End Link as content -->
                             <?php endif; ?>

@@ -23,7 +23,7 @@ if(!$disable_layout) {
 ?>
 
 <section id="<?php echo ($custom_id ); ?>" class="section-testimonial <?php echo ($custom_class ); ?>" style="<?php if ($background_image):?>background-image: url('<?php echo $background_image; ?>');<?php endif; ?><?php if ($background_color):?>background-color:<?php echo $background_color;?>;<?php endif; ?>">
-	<div class="container <?php echo ($invert_content) ? 'text-white' : ''; ?>">
+	<div class="narrow-container container <?php echo ($invert_content) ? 'text-white' : ''; ?>">
 		<?php 
 		if( $layout_style == 'style_one' ) {
 			get_template_part( 'template-parts/blocks/testimonials/skin-1' );

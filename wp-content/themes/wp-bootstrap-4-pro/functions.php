@@ -187,8 +187,8 @@ function wp_bootstrap_4_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-4' ),
 		'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="h4">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h2 class="h6">',
+		'after_title'   => '</h2>',
 	) );
 
 	register_sidebar( array(
@@ -197,8 +197,8 @@ function wp_bootstrap_4_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-4' ),
 		'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="h4">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h2 class="h6">',
+		'after_title'   => '</h2>',
 	) );
 
 	register_sidebar( array(
@@ -207,8 +207,8 @@ function wp_bootstrap_4_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-4' ),
 		'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="h4">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h2 class="h6">',
+		'after_title'   => '</h2>',
 	) );
 
 	register_sidebar( array(
@@ -217,8 +217,8 @@ function wp_bootstrap_4_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-4' ),
 		'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="h4">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h2 class="h6">',
+		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer Bottom Section', 'wp-bootstrap-4' ),
