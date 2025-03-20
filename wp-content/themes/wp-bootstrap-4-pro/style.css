@@ -116,6 +116,7 @@ label.label {
     background: transparent;
   }
 }
+
 /*--------------------------------------------------------------
 # Custom Secondary Navbar 
 --------------------------------------------------------------*/
@@ -159,6 +160,11 @@ label.label {
 @media (min-width: 991px) {
   .card.extra-breadcrumb-nav {
     min-width: 420px;
+  }
+}
+@media (max-width: 575px) {
+  #breadcrumb-navigation>.container>span{
+    display: none;
   }
 }
 /*--------------------------------------------------------------
