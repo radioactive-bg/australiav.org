@@ -15,7 +15,7 @@ COPY ./wp-content /var/www/html/wp-content
 COPY ./australiav-db-dump.sql /var/www/html/australiav-db-dump.sql
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./entrypoint.sh /entrypoint.sh
-#COPY ./.htpasswd /etc/nginx/.htpasswd
+COPY ./.htpasswd /etc/nginx/.htpasswd
 
 # Set permissions
 RUN chmod +x /entrypoint.sh \

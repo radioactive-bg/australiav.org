@@ -18,6 +18,8 @@ services:
     volumes:
       - ./wp-content:/var/www/html/wp-content
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./htpasswd:/etc/nginx/.htpasswd
+
 
   australiav_db:
     image: mysql:5.7
