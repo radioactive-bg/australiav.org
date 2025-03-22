@@ -44,4 +44,4 @@ jobs:
           scp -i ~/.ssh/id_rsa australiav-db-dump.sql production-server:/tmp/australiav-db-dump.sql
 
           # Import the database on the production server
-          ssh -i ~/.ssh/id_rsa production-server "mysql -h10.4.30.2 -u2Y9filhE1g -pW#^7#DMU7aY8Wq5Y wp_avwof < /australiav-db-dump.sql"
+          ssh -i ~/.ssh/id_rsa production-server "mysql -h10.4.30.2 -u2Y9filhE1g -pW#^7#DMU7aY8Wq5Y wp_avwof < /tmp/australiav-db-dump.sql"
