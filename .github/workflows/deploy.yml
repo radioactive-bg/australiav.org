@@ -27,7 +27,7 @@ jobs:
 
       - name: Trigger Portainer Webhook
         run: |
-          curl -k -X POST https://154.16.166.20:9443/api/stacks/webhooks/4ea59a80-2d2a-465a-a3ed-6a9bef185520
+          curl -k -X POST https://154.16.166.20:9443/api/stacks/webhooks/9f6e10b6-316b-4649-aeff-3ad8f6f5cac6
         env:
           CURL_CA_BUNDLE: /etc/ssl/certs/ca-certificates.crt
 
