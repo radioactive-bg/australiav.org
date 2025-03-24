@@ -955,7 +955,7 @@ html[dir="rtl"] #toc ul li button {
 .sidebar-area .widget:not(:empty){margin-top: var(--spacer-3); position: relative;}
 .sidebar-area .widget:not(:last-child):after {content: '';display: block;width: calc(100% - 0rem);height: 1px;background-color: #dee2e621;position: absolute;bottom: -10px;left: 0;right: 0;margin: auto;}
 .sidebar-area ul, .footer-widgets .widget ul, .widget ul, footer.site-footer .menu { padding: 0px; margin-bottom: 0; list-style: none; margin-top: 1.4rem; display: flex;flex-wrap: wrap;}
-.sidebar-area ul li, .footer-widgets .widget ul li { padding-top: .6rem; padding-bottom: .6rem;}
+.sidebar-area ul li, .footer-widgets .widget ul li { padding-top: .3rem; padding-bottom: .3rem;}
 .sidebar-area ul li:first-of-type, .footer-widgets .widget ul li:first-of-type {padding-top: 0;} 
 .sidebar-area ul li:last-of-type, .footer-widgets .widget ul li:last-of-type {padding-bottom: 0;} 
 .sidebar-area ul li:not(:last-of-type){border-bottom: 1px solid rgba(255, 255, 255, .1);}
