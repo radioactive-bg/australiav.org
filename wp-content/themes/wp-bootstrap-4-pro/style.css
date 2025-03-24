@@ -20,10 +20,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   background-color: var(--light) !important;
 }
 h2,
-.heading{
+.heading {
   margin-bottom: var(--spacer-4);
 }
-p:not(:last-child){
+p:not(:last-child) {
   margin-bottom: var(--spacer-3);
 }
 label {
@@ -66,8 +66,9 @@ label.label {
   text-transform: unset;
   font-size: 1.2rem;
   color: #fff;
-  font-weight: 400;
+  font-weight: 600;
 }
+
 .section-content-img .img-wrapper img {
   border-radius: 16px;
 }
@@ -163,7 +164,7 @@ label.label {
   }
 }
 @media (max-width: 575px) {
-  #breadcrumb-navigation>.container>span{
+  #breadcrumb-navigation > .container > span {
     display: none;
   }
 }
@@ -205,7 +206,7 @@ label.label {
 # Bootstrap Buttons
 --------------------------------------------------------------*/
 .section-list .btn,
-.section-content .btn{
+.section-content .btn {
   min-width: 300px;
 }
 
@@ -221,7 +222,7 @@ label.label {
   color: var(--dark);
 }
 .btn-dark:focus,
-.btn-primary:focus{
+.btn-primary:focus {
   color: #fff;
 }
 .btn:not(.btn-link):not(.nav-link):not([data-toggle="collapse"]):after {

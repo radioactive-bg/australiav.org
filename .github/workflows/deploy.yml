@@ -1,0 +1,47 @@
+name: CI/CD for WordPress
+
+on:
+  push:
+    branches:
+      - dev # Trigger workflow when code is pushed to the dev branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          registry: hub.radioactive.ac
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t hub.radioactive.ac/radioactive/staging-australiav-wordpress .
+          docker push hub.radioactive.ac/radioactive/staging-australiav-wordpress
+
+      - name: Trigger Portainer Webhook
+        run: |
+          curl -k -X POST https://154.16.166.20:9443/api/stacks/webhooks/4ea59a80-2d2a-465a-a3ed-6a9bef185520
+        env:
+          CURL_CA_BUNDLE: /etc/ssl/certs/ca-certificates.crt
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo -e "Host production-server\n  HostName ${{ secrets.PRODUCTION_HOST }}\n  User ${{ secrets.PRODUCTION_USER }}\n  IdentityFile ~/.ssh/id_rsa\n  StrictHostKeyChecking no" > ~/.ssh/config
+
+      - name: Import Database via SSH
+        run: |
+          # Copy the latest australiav-db-dump.sql to the production server
+          scp -i ~/.ssh/id_rsa australiav-db-dump.sql production-server:/tmp/australiav-db-dump.sql
+
+          # Import the database on the production server
+          ssh -i ~/.ssh/id_rsa production-server "mysql -h10.4.30.2 -u2Y9filhE1g -pW#^7#DMU7aY8Wq5Y wp_avwof < /tmp/australiav-db-dump.sql"

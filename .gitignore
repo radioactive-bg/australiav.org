@@ -37,6 +37,10 @@ wp-config.php
 # htaccess
 /.htaccess
 
+
+# htpasswd
+/.htpasswd
+
 # All plugins
 #
 # Note: If you wish to blacklist plugins,
