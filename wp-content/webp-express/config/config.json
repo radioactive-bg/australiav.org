@@ -103,15 +103,14 @@
         }
     ],
     "metadata": "none",
-    "convert-on-upload": false,
+    "convert-on-upload": true,
     "fail": "original",
     "success-response": "converted",
     "alter-html": {
-        "enabled": false,
+        "enabled": true,
         "only-for-webp-enabled-browsers": false,
-        "alter-html-add-picturefill-js": true,
         "only-for-webps-that-exists": false,
-        "replacement": "picture",
+        "replacement": "url",
         "hooks": "ob",
         "hostname-aliases": []
     },
