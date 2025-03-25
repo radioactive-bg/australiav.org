@@ -13,7 +13,7 @@ if( have_rows( 'page_header_settings' ) ) :
 endif;
 
 ?>
-<header id="masthead" class="header_<?php echo $header_style ;?> site-header <?php echo ($invert_heading) ? 'inverted-nav' : ''; ?>  <?php if ( get_theme_mod( 'sticky_header', 0 ) ) : echo 'sticky-top'; endif; ?> bg-dark">
+<header id="masthead" class="header_<?php echo $header_style ;?> site-header <?php echo ($invert_heading) ? 'inverted-nav' : ''; ?>  <?php if ( get_theme_mod( 'sticky_header', 0 ) ) : echo 'sticky-top'; endif; ?>">
 
 <?php if( get_theme_mod( 'header_within_container', 0 ) ) : ?><div class="container py-2 py-lg-3 <?php echo is_front_page()? '' : ''; ?>"><?php else: ?><div class="container-fluid py-2 py-lg-3 <?php echo is_front_page()? '' : ''; ?>"><?php endif; ?>
 	<div class="row">

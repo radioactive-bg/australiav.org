@@ -973,7 +973,7 @@ html[dir="rtl"] #toc ul li button {
 footer.site-footer ul:not(.legal-nav) li:not(:last-of-type){border-bottom:0px solid rgba(255, 255, 255, .1)}
 footer.site-footer .legal-nav .nav-item{width:50%;margin-top:0;margin-bottom:.5rem; padding-bottom: 0;}
 footer.site-footer .legal-nav .nav-link {padding: 0 0 0rem 0rem}
-footer.site-footer .menu a:hover {color: var(--primary)}
+footer.site-footer .menu a:hover {color: var(--secondary)}
 @media (min-width: 992px) {
     footer.site-footer .legal-nav .nav-item{margin-bottom:0rem;width: 33.333%;}
 }

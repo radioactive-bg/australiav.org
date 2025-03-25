@@ -29,6 +29,9 @@ p:not(:last-child) {
 label {
   opacity: 0.6;
 }
+em {
+  color: var(--dark);
+}
 .accordion .btn {
   font-size: 1.4rem;
   padding: 0;
@@ -81,7 +84,9 @@ label.label {
 /*--------------------------------------------------------------
 # Custom Header
 --------------------------------------------------------------*/
-
+header {
+  background-color: #061b36;
+}
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
@@ -120,8 +125,12 @@ label.label {
 /*--------------------------------------------------------------
 # Custom Secondary Navbar 
 --------------------------------------------------------------*/
+nav#breadcrumb-navigation.text-white span a:not(:hover) {
+  color: #fff;
+}
 
 .card.extra-breadcrumb-nav {
+  background-color: #061b36;
   position: absolute;
   right: 0;
   display: flex;
@@ -208,7 +217,12 @@ label.label {
 .section-content .btn {
   min-width: 300px;
 }
-
+@media (max-width: 575px) {
+  .section-list .btn,
+  .section-content .btn {
+    width: 100%;
+  }
+}
 .btn-secondary,
 .btn-dark:hover,
 .btn-primary:hover,
