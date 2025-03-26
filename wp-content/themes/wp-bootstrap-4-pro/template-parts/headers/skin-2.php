@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Header Style: Skin 2
@@ -18,7 +17,7 @@ endif;
 <?php if( get_theme_mod( 'header_within_container', 0 ) ) : ?><div class="container py-2 py-lg-3 <?php echo is_front_page()? '' : ''; ?>"><?php else: ?><div class="container-fluid py-2 py-lg-3 <?php echo is_front_page()? '' : ''; ?>"><?php endif; ?>
 	<div class="row">
 		<div class="col-12 col-lg d-flex flex-wrap flex-column align-items-center">
-			<button class="navbar-dark navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#primary-menu-wrapper" aria-controls="primary-menu-wrapper" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="x-navbar-dark navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#primary-menu-wrapper" aria-controls="primary-menu-wrapper" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<?php the_custom_logo(); ?>
@@ -54,7 +53,7 @@ endif;
 				'container'       => 'div',
 				'container_class' => 'collapse navbar-collapse',
 				'container_id'    => 'primary-menu-wrapper',
-				'menu_class'      => 'navbar-nav mx-auto pb-4 pb-lg-0 px-0',
+				'menu_class'      => 'navbar-nav mx-auto py-4 py-lg-0 px-0',
 				'fallback_cb'     => '__return_false',
 				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 				'depth'           => 2,
