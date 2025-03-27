@@ -1893,7 +1893,8 @@ function get_webp_url_if_available_own($url){
 			$webp_url_folder = str_replace("", "", $webp_url);
 		} else {
 			if ( is_webp_express_active() ) {
-               $webp_url_folder = str_replace("/uploads/", "/webp-express/webp-images/uploads/", $webp_url);
+			   // $webp_url_folder = str_replace("/uploads/", "/webp-express/webp-images/uploads/", $webp_url);
+               $webp_url_folder = str_replace("/uploads/", "/webp-express/webp-images/doc-root/wp-content/uploads/", $webp_url);
 			} else {
 				$webp_url_folder = str_replace("", "", $webp_url);
 			}

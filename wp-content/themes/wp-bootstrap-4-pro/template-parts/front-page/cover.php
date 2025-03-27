@@ -60,7 +60,7 @@ $typewriter =  get_field('typewriter','options');
     </section>
     <nav id="" class="relative navbar text-white w-100 py-0">
         <div class="container">		
-            <div class="extra-breadcrumb-nav ml-auto card overflow-visible bg-dark border-0">
+            <div class="extra-breadcrumb-nav ml-auto card overflow-visible border-0">
                 <div class="card-body py-2 px-3 px-lg-5">
                     <p class="mb-0 px-3"><?php echo __( 'visa types', 'wp-bootstrap-4' ) ;?></p>
                     <?php

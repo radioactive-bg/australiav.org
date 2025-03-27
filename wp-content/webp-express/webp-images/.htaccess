@@ -11,7 +11,7 @@
 # - Redirection to converter to create missing webp files upon request for the webp: enabled
 # - Destination folder: separate
 # - Destination extension: append
-# - Destination structure: image-roots
+# - Destination structure: doc-root
 # - Image types: jpeg, png
 # - Alter HTML enabled?: yes
 #
@@ -36,7 +36,8 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule (?i).*(\.jpe?g|\.png)\.webp$ /australiav.org/wp-content/plugins/webp-express/wod/webp-realizer.php [E=WE_WP_CONTENT_REL_TO_WE_PLUGIN_DIR:../../,E=WE_DESTINATION_REL_HTACCESS:$0,E=WE_HTACCESS_ID:cache,NC,L]
+  RewriteRule ^/?(.+)\.(webp)$ /australiav.org/wp-content/plugins/webp-express/wod/webp-realizer.php [E=DESTINATIONREL:australiav.org/wp-content/webp-express/webp-images/$0,E=WPCONTENT:australiav.org/wp-content,NC,L]
+
 </IfModule>
 
 # Set Vary:Accept header if we came here by way of our redirect, which set the ADDVARY environment variable

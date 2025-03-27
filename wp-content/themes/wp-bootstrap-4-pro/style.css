@@ -20,14 +20,17 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   background-color: var(--light) !important;
 }
 h2,
-.heading{
+.heading {
   margin-bottom: var(--spacer-4);
 }
-p:not(:last-child){
+p:not(:last-child) {
   margin-bottom: var(--spacer-3);
 }
 label {
   opacity: 0.6;
+}
+em {
+  color: var(--dark);
 }
 .accordion .btn {
   font-size: 1.4rem;
@@ -81,7 +84,9 @@ label.label {
 /*--------------------------------------------------------------
 # Custom Header
 --------------------------------------------------------------*/
-
+header {
+  background-color: #061b36;
+}
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
@@ -96,8 +101,8 @@ label.label {
     margin-right: -2rem;
   }
   header .navbar-nav {
-    max-height: calc(100vh - 130px);
-    min-height: calc(100vh - 130px);
+    max-height: calc(100vh - 86px);
+    min-height: calc(100vh - 86px);
     flex-wrap: nowrap;
     overflow-y: scroll;
   }
@@ -120,8 +125,12 @@ label.label {
 /*--------------------------------------------------------------
 # Custom Secondary Navbar 
 --------------------------------------------------------------*/
+nav#breadcrumb-navigation.text-white span a:not(:hover) {
+  color: #fff;
+}
 
 .card.extra-breadcrumb-nav {
+  background-color: #061b36;
   position: absolute;
   right: 0;
   display: flex;
@@ -163,7 +172,7 @@ label.label {
   }
 }
 @media (max-width: 575px) {
-  #breadcrumb-navigation>.container>span{
+  #breadcrumb-navigation > .container > span {
     display: none;
   }
 }
@@ -205,10 +214,15 @@ label.label {
 # Bootstrap Buttons
 --------------------------------------------------------------*/
 .section-list .btn,
-.section-content .btn{
+.section-content .btn {
   min-width: 300px;
 }
-
+@media (max-width: 575px) {
+  .section-list .btn,
+  .section-content .btn {
+    width: 100%;
+  }
+}
 .btn-secondary,
 .btn-dark:hover,
 .btn-primary:hover,
@@ -221,7 +235,7 @@ label.label {
   color: var(--dark);
 }
 .btn-dark:focus,
-.btn-primary:focus{
+.btn-primary:focus {
   color: #fff;
 }
 .btn:not(.btn-link):not(.nav-link):not([data-toggle="collapse"]):after {

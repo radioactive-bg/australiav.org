@@ -11,7 +11,7 @@
 # - Redirection to converter to create missing webp files upon request for the webp: enabled
 # - Destination folder: separate
 # - Destination extension: append
-# - Destination structure: image-roots
+# - Destination structure: doc-root
 # - Image types: jpeg, png
 # - Alter HTML enabled?: yes
 #
@@ -62,15 +62,13 @@
   # Redirect to existing converted image in cache-dir (if browser supports webp)
   RewriteCond %{HTTP_ACCEPT} image/webp
   RewriteCond %{REQUEST_FILENAME} -f
-  RewriteCond %{REQUEST_FILENAME} (?i)(C:/Projects\australiav.org/wp-content/uploads/)(.*)(\.jpe?g|\.png)$
-  RewriteCond C:/Projects/australiav.org/wp-content/webp-express/webp-images/uploads/%2%3.webp -f
-  RewriteRule (?i)(.*)(\.jpe?g|\.png)$ /australiav.org/wp-content/webp-express/webp-images/uploads/%2%3\.webp [T=image/webp,E=EXISTING:1,E=ADDVARY:1,L]
+  RewriteCond %{DOCUMENT_ROOT}/australiav.org/wp-content/webp-express/webp-images/doc-root/australiav.org/wp-content/uploads/$1.$2.webp -f
+  RewriteRule ^/?(.+)\.(jpe?g|png)$ /australiav.org/wp-content/webp-express/webp-images/doc-root/australiav.org/wp-content/uploads/$1.$2.webp [NC,T=image/webp,E=EXISTING:1,E=ADDVARY:1,L]
 
   # Redirect images to webp-on-demand.php (if browser supports webp)
   RewriteCond %{HTTP_ACCEPT} image/webp
   RewriteCond %{REQUEST_FILENAME} -f
-  RewriteCond %{REQUEST_FILENAME} (?i)(.*)(\.jpe?g|\.png)$
-  RewriteRule (?i).*$ /australiav.org/wp-content/plugins/webp-express/wod/webp-on-demand.php [E=WE_WP_CONTENT_REL_TO_WE_PLUGIN_DIR:../../,E=WE_SOURCE_REL_HTACCESS:$0,E=WE_HTACCESS_ID:uploads,NC,L]
+  RewriteRule ^/?(.+)\.(jpe?g|png)$ /australiav.org/wp-content/plugins/webp-express/wod/webp-on-demand.php [NC,L,E=REQFN:%{REQUEST_FILENAME},E=WPCONTENT:australiav.org/wp-content]
 
   # Make sure that browsers which does not support webp also gets the Vary:Accept header
   # when requesting images that would be redirected to webp on browsers that does.
