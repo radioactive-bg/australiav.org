@@ -185,6 +185,8 @@ function add_background_mix() {
         </div>
     </div>
 </section>
+
+
 <?php if ( function_exists( 'yoast_breadcrumb' ) ) { ?>
 <nav id="breadcrumb-navigation" class="breadcrumb-navigation relative navbar text-white w-100 py-sm-2">
 	<div class="container">	
