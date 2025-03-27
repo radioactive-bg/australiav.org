@@ -69,9 +69,8 @@ label.label {
   text-transform: unset;
   font-size: 1.2rem;
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
 }
-
 .section-content-img .img-wrapper img {
   border-radius: 16px;
 }
