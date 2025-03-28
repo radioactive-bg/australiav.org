@@ -186,7 +186,6 @@ function add_background_mix() {
     </div>
 </section>
 
-
 <?php if ( function_exists( 'yoast_breadcrumb' ) ) { ?>
 <nav id="breadcrumb-navigation" class="breadcrumb-navigation relative navbar text-white w-100 py-sm-2">
 	<div class="container">	
@@ -195,7 +194,7 @@ function add_background_mix() {
             yoast_breadcrumb( );
         }
         ?>	
-        <div class="extra-breadcrumb-nav ml-auto card overflow-visible border-0">
+        <div class="extra-breadcrumb-nav ml-auto card overflow-visible border-0 misho-class">
             <div class="card-body py-2 px-3 px-lg-5">
                 <p class="mb-0 px-3"><?php echo __( 'visa types', 'wp-bootstrap-4' ) ;?></p>
                 <?php
