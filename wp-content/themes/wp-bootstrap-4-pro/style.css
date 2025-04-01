@@ -132,14 +132,22 @@ nav#breadcrumb-navigation.text-white span a:not(:hover) {
 .card.extra-breadcrumb-nav {
   background-color: #061b36;
   position: absolute;
-  right: 0;
   display: flex;
   align-items: center;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
   border-radius: 8px;
   min-width: 250px;
   z-index: 2;
+}
+
+html:not([dir="rtl"]) .card.extra-breadcrumb-nav {
+  right: 0;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+html[dir="rtl"] .card.extra-breadcrumb-nav {
+  left: 0;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 #secondary-menu > li {
   border-bottom: 2px solid #fff;
@@ -398,16 +406,21 @@ footer.site-footer .legal-nav .nav-item {
 
 header .wpml-ls-legacy-dropdown,
 header .wpml-ls-legacy-list-horizontal {
-  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 114px;
 }
+
 html[dir="rtl"] header .wpml-ls-legacy-dropdown,
 html[dir="rtl"] header .wpml-ls-legacy-list-horizontal {
   margin-left: unset;
-  margin-right: 10px;
+  margin-right: unset;
 }
 header .wpml-ls-legacy-dropdown a,
-header .wpml-ls-legacy-list-horizontal a {
-  color: var(--dark);
+header .wpml-ls-legacy-list-horizontal a,
+.wpml-ls-legacy-dropdown .wpml-ls-current-language:hover>a,
+.wpml-ls-legacy-dropdown a:focus,
+.wpml-ls-legacy-dropdown a:hover {
+  color: var(--light);
 }
 .inverted-nav .share-on,
 .inverted-nav .wpml-ls-legacy-dropdown a,

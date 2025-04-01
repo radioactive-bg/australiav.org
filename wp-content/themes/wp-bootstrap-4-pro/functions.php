@@ -2017,3 +2017,7 @@ add_shortcode('product_catalog','product_catalog');
 // End Shortcode Display Product Static Catalog
 
 
+
+
+
+
