@@ -209,6 +209,12 @@ html[dir="rtl"] .card.extra-breadcrumb-nav {
   background-size: 60% auto;
   border-radius: 50px;
 }
+.section-testimonial .carousel-indicators li{
+    background-color: var(--primary);
+}
+.section-testimonial .carousel-indicators li.active {
+    background-color: var(--secondary);
+}
 /*--------------------------------------------------------------
 # Bootstrap Modal
 --------------------------------------------------------------*/
