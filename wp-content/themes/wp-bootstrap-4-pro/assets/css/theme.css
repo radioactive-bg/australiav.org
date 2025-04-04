@@ -119,6 +119,9 @@ ol > li {
   --spacing: 1rem;
   margin-bottom: var(--spacer-2);
 }
+ol > li p {
+	display: inline;
+}
 html:not([dir="rtl"]) ol > li {
   padding-left: var(--spacing);
 }
