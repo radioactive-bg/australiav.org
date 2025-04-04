@@ -190,8 +190,11 @@ html[dir="rtl"] .card.extra-breadcrumb-nav {
 .section-testimonial .card {
   background-color: #001a6b;
 }
+.carousel-item .slide-img {
+    max-width: 100px;
+}
 .section-testimonial .slide-desc {
-  max-width: 360px;
+  max-width: 420px;
   margin: auto;
 }
 .carousel-control-prev,
@@ -369,6 +372,10 @@ button.btn-search:after,
   padding: 10px;
   width: 50%;
   text-align: center;
+}
+.ltr {
+    direction: ltr;
+    unicode-bidi: embed;
 }
 /*--------------------------------------------------------------
 # Custom Sections
