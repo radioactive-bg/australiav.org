@@ -703,7 +703,7 @@ class Ai1wm_Main_Controller {
 	public function register_scripts_and_styles() {
 		ai1wm_register_style(
 			'ai1wm_servmask',
-			Ai1wm_Template::asset_link( 'css/servmask.min.css' ),
+			Ai1wm_Template::asset_link( 'css/servmask.min.css' )
 		);
 
 		wp_register_script(

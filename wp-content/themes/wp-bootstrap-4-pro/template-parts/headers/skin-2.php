@@ -20,7 +20,9 @@ endif;
 			<button class="x-navbar-dark navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#primary-menu-wrapper" aria-controls="primary-menu-wrapper" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+			<div class="mr-auto">
 			<?php if ( is_active_sidebar( 'header-social' ) ) { dynamic_sidebar( 'header-social' ); }?>
+            </div>
 			<?php the_custom_logo(); ?>
 
 			<div class="site-branding-text col col-md-auto col-lg text-center <?php if ( is_rtl()) : ?>text-md-right<?php else: ?>text-md-left<?php endif; ?> px-0 ml-0 ml-md-3">

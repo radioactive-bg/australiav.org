@@ -20,9 +20,6 @@ include 'vars.php';
 			<?php if ( $layout_title ):?>
 			<h2 class="heading"><?php echo $layout_title; ?></h2>
 			<?php endif;?>
-			<?php if ( $description ):?>
-			<div class="section-desc mx-auto"><?php echo $description; ?></div>
-			<?php endif;?>
 		</div>
 	<?php endif;?>
 </div>		
@@ -106,3 +103,13 @@ else :
 	// no rows found
 
 	endif; ?>
+
+<div class="row">
+	<?php if ( $description ): ?>
+		<div class="col-12 mt-5 text-center">
+			<?php if ( $description ):?>
+			<div class="section-desc mx-auto"><?php echo $description; ?></div>
+			<?php endif;?>
+		</div>
+	<?php endif;?>
+</div>	

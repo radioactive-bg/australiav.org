@@ -22,7 +22,7 @@ $typewriter =  get_field('typewriter','options');
                 <div class="row">
                     <div class="jumbotron-content col <?php if ( get_theme_mod( 'front_cover_center_content', 1 ) ) : ?>text-center mx-auto<?php endif; ?>" style="max-width: <?php echo get_theme_mod( 'front_cover_content_width', 1920); ?>px">
                         <?php if( !empty(get_theme_mod( 'front_cover_label' ) )) : ?>
-                        <label class="jumbotron-label label mb-0"><?php echo wp_kses_post( get_theme_mod( 'front_cover_label', $default_cover_label ) ); ?></label>
+                        <label class="jumbotron-label label mb-2"><?php echo wp_kses_post( get_theme_mod( 'front_cover_label', $default_cover_label ) ); ?></label>
                         <?php endif; ?>
                         <?php if( get_theme_mod( 'front_cover_title' ) ) : ?>
                         <h1 class="jumbotron-heading <?php echo $front_cover_title_color ; ?> <?php if( get_theme_mod( 'front_cover_lead' ) ) : ?>mb-0<?php endif; ?>" <?php if($typewriter): ?>data-text='["<?php echo wp_kses_post( get_theme_mod( 'front_cover_title', $default_cover_title ) ); ?>"]' style="opacity: 0;"<?php endif; ?>><?php echo wp_kses_post( get_theme_mod( 'front_cover_title', $default_cover_title ) ); ?></h1>
