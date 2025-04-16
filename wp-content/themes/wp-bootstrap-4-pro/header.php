@@ -8,6 +8,8 @@
  *
  * @package WP_Bootstrap_4
  */
+
+
 $header_style = get_field('header_style', 'option');
 $page_bgr_image = '';
 $page_bgr_color = '';
