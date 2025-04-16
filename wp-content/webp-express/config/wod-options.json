@@ -17,27 +17,27 @@
             {
                 "id": "uploads",
                 "rel-path": "wp-content/uploads",
-                "url": "http://localhost:8080/wp-content/uploads"
+                "url": "https://staging.australiav.org/wp-content/uploads"
             },
             {
                 "id": "themes",
                 "rel-path": "wp-content/themes",
-                "url": "http://localhost:8080/wp-content/themes"
+                "url": "https://staging.australiav.org/wp-content/themes"
             },
             {
                 "id": "plugins",
                 "rel-path": "wp-content/plugins",
-                "url": "http://localhost:8080/wp-content/plugins"
+                "url": "https://staging.australiav.org/wp-content/plugins"
             },
             {
                 "id": "wp-content",
                 "rel-path": "wp-content",
-                "url": "http://localhost:8080/wp-content"
+                "url": "https://staging.australiav.org/wp-content"
             },
             {
                 "id": "index",
                 "rel-path": ".",
-                "url": "http://localhost:8080"
+                "url": "https://staging.australiav.org"
             }
         ],
         "success-response": "converted"
